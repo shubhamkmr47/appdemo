@@ -10,7 +10,8 @@ hello <- function(myname = ""){
     library(rjson)
   }
 
-  data <- mydata
+  data <- mtcars
+  #jsonString <- toJSON(unname(split(data, 1:nrow(data))))
   data <- as.matrix(data)
   d <- dist(data)
   hc <- hclust(d)
