@@ -61,5 +61,5 @@ for (i in 1:size[1]) {
   }
   storeData[i] <- string
 }
-message <- storeData[size[1]]
+list(message = paste(storeData[size[1]]))
 }
