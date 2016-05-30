@@ -61,5 +61,5 @@ for (i in 1:size[1]) {
   }
   storeData[i] <- string
 }
-message <- string
+message <- storeData[size[1]]
 }
