@@ -198,6 +198,7 @@
         }, function(output){
           $("#output").text(output.message);
           json_string = output.message;
+          alert(json_string);
         });
 
         //if R returns an error, alert the error message
@@ -211,8 +212,7 @@
         });
       });
     });
-
-    alert(json_string);
+    
     </script>
 
   </head>
