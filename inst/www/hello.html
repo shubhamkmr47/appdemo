@@ -54,8 +54,8 @@
         }, function(output){
           $("#output").text(output.message);
           json_string = output.message;
-          alert(JSON.stringify(json_string));
         });
+        alert(JSON.stringify(json_string));
 
         //if R returns an error, alert the error message
         req.fail(function(){
