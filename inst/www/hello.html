@@ -3,6 +3,11 @@
   <head>
     <title>Hello</title>
 
+    <!-- Include order: first jquery, then opencpu.js, and then your code -->
+    <script src="opencpu/jquery-1.10.2.min.js"></script>
+    <script src="opencpu/opencpu-0.4.js"></script>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+
     <style>
       #output{
         height: 80px;
@@ -12,30 +17,26 @@
       }
 
       .node {
-      cursor: pointer;
-    }
+        cursor: pointer;
+      }
 
-    .node circle {
-      fill: #fff;
-      stroke: steelblue;
-      stroke-width: 1.5px;
-    }
+      .node circle {
+        fill: #fff;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+      }
 
-    .node text {
-      font: 10px sans-serif;
-    }
+      .node text {
+        font: 10px sans-serif;
+      }
 
-    .link {
-      fill: none;
-      stroke: #ccc;
-      stroke-width: 1.5px;
-    }
+      .link {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: 1.5px;
+      }
     </style>
 
-    <!-- Include order: first jquery, then opencpu.js, and then your code -->
-    <script src="opencpu/jquery-1.10.2.min.js"></script>
-    <script src="opencpu/opencpu-0.4.js"></script>
-    <script src="//d3js.org/d3.v3.min.js"></script>
     <script>
     //init this script when the page has loaded
     $(document).ready(function(){
@@ -46,7 +47,7 @@
 
         //read the value for 'myname'
         var myname = $("#namefield").val();
-        var json_string = "";
+        var json_string = '';
 
         //perform the request
         var req = ocpu.rpc("hello", {
@@ -81,6 +82,8 @@
     <button id="submitbutton" type="button">Submit to server!</button>
 
     <p id="output"></p>
+
+    <button onclick="location.href='./dendogram.html'">dendogram</button>
 
   </body>
 </html>
