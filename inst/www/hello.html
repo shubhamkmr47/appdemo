@@ -62,10 +62,10 @@
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
-        d3.json(json_string, function(error, flare) {
+        d3.json("data.html", function(error, flare) {
           if (error) throw error;
 
-          root = flare;
+          root = json_string;
           root.x0 = height / 2;
           root.y0 = 0;
 
