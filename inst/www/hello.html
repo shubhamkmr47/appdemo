@@ -40,8 +40,6 @@
     //init this script when the page has loaded
     $(document).ready(function(){
 
-      var json_string = "";
-
       function plotDendogram(jsonFile){
         var margin = {top: 20, right: 120, bottom: 20, left: 120},
             width = 960 - margin.right - margin.left,
@@ -191,6 +189,7 @@
 
         //read the value for 'myname'
         var myname = $("#namefield").val();
+        var json_string = "";
 
         //perform the request
         var req = ocpu.rpc("hello", {
@@ -198,8 +197,10 @@
         }, function(output){
           $("#output").text(output.message);
           json_string = output.message;
-          alert(json_string);
+          plotDendogram(json_string);
         });
+
+
 
         //if R returns an error, alert the error message
         req.fail(function(){
@@ -212,7 +213,7 @@
         });
       });
     });
-    
+
     </script>
 
   </head>
